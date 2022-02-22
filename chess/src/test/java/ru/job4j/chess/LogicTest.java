@@ -10,19 +10,6 @@ import static org.junit.Assert.assertEquals;
 
 public class LogicTest {
 
-    @Ignore
-    @Test
-    public void move()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
-        Logic logic = new Logic();
-        Figure figure = new BishopBlack(Cell.C1);
-        logic.add(figure);
-        logic.move(Cell.C1, Cell.H6);
-        Cell cell = figure.position();
-
-        assertEquals(Cell.H6, cell);
-    }
-
     @Test(expected = FigureNotFoundException.class)
     public void whenFigureNotFound()
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {

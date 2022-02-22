@@ -47,19 +47,4 @@ public final class Logic {
         }
         throw new FigureNotFoundException();
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Logic logic = (Logic) o;
-        return index == logic.index && Arrays.equals(figures, logic.figures);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = Objects.hash(index);
-        result = 31 * result + Arrays.hashCode(figures);
-        return result;
-    }
 }
